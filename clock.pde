@@ -15,6 +15,7 @@ void setup(){
 
 void draw(){
   color timer2 = circlesColor();
+  println(timer2);
   smooth();
   fill(timer2);
   noStroke();
@@ -24,17 +25,17 @@ void draw(){
 }
 
 color circlesColor(){
-  float s = float(second()) ;
-float m = float(minute());
-float h = float(hour());
-float d = float(day());
-   float newS = map(s, 0, 59, 0, 100);
-  float newM = map(m, 0, 59, 0, 100);
-  float newH = map(h, 0, 23, 0, 100);
-  float newD = map(d, 1, 31, 0, 100);
-  println(newS + " " + newM + " " + newH + " " + newD);
+  //float s = float(second()) ;
+  //float m = float(minute());
+  //float h = float(hour());
+  //float d = float(day());
+  float s = map(float(second()), 0, 59, 0, 100);
+  float m = map(float(minute()), 0, 59, 0, 100);
+  float h = map(float(hour()), 0, 23, 0, 100);
+  float d = map(float(day()), 1, 31, 0, 100);
+  
 
- return timer = color(newS, newM, newH, newD);
+ return timer = color(s, m, h, d);
 }
 
 
